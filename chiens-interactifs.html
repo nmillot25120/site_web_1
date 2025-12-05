@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Chiens interactifs</title>
+  <link rel="stylesheet" href="style.css">
+
+  <style>
+    .interactive-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px;
+      justify-content: center;
+      margin-top: 30px;
+    }
+
+    .interactive-dog {
+      width: 220px;
+      padding: 10px;
+      background: #fff;
+      border-radius: 15px;
+      box-shadow: 0 3px 8px rgba(0,0,0,0.2);
+      text-align: center;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      cursor: pointer;
+      position: relative;
+    }
+
+    .interactive-dog:hover {
+      transform: scale(1.08);
+      box-shadow: 0 6px 12px rgba(0,0,0,0.25);
+    }
+
+    .interactive-dog img {
+      width: 100%;
+      border-radius: 12px;
+    }
+
+    .bark {
+      position: absolute;
+      top: -15px;
+      right: -10px;
+      background: #ffcc00;
+      padding: 6px 10px;
+      border-radius: 12px;
+      font-weight: bold;
+      display: none;
+      animation: pop 0.4s ease;
+    }
+
+    @keyframes pop {
+      0% { transform: scale(0.4); }
+      100% { transform: scale(1); }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>Chiens interactifs</h1>
+    <nav>
+      <a href="index.html">Accueil</a>
+      <a href="races-famille.html">Chiens de famille</a>
+      <a href="races-chasse.html">Chiens de chasse</a>
+      <a href="chiens-interactifs.html">Chiens interactifs</a>
+    </nav>
+  </header>
+
+  <div class="container">
+
+    <h2>Clique sur un chien pour le faire aboyer 🐾</h2>
+
+    <div class="interactive-container">
+
+      <div class="interactive-dog" onclick="bark(this)">
+        <div class="bark">WOOF !</div>
+        <img src="https://images.unsplash.com/photo-1507149833265-60c372daea22" alt="Beagle">
+        <h3>Beagle</h3>
+      </div>
+
+      <div class="interactive-dog" onclick="bark(this)">
+        <div class="bark">WOOF !</div>
+        <img src="https://images.unsplash.com/photo-1517849845537-4d257902454a" alt="Labrador">
+        <h3>Labrador</h3>
+      </div>
+
+      <div class="interactive-dog" onclick="bark(this)">
+        <div class="bark">WOOF !</div>
+        <img src="https://images.unsplash.com/photo-1558788353-f76d92427f16" alt="Husky">
+        <h3>Husky</h3>
+      </div>
+
+    </div>
+  </div>
+
+  <script>
+    function bark(card) {
+      const bubble = card.querySelector(".bark");
+      bubble.style.display = "block";
+      setTimeout(() => bubble.style.display = "none", 600);
+    }
+  </script>
+
+</body>
+</html>
