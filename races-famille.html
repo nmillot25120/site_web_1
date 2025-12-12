@@ -3,6 +3,150 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Accueil - Monde des Chiens</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #fafafa;
+      color: #333;
+    }
+
+    header {
+      height: 70vh;
+      background: url('https://images.unsplash.com/photo-1517849845537-4d257902454a') center/cover no-repeat;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      color: white;
+      padding: 20px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    }
+
+    header h1 {
+      font-size: 3rem;
+      margin: 0;
+      text-shadow: 0 2px 6px rgba(0,0,0,0.6);
+    }
+
+    header p {
+      font-size: 1.3rem;
+      max-width: 600px;
+      text-shadow: 0 2px 6px rgba(0,0,0,0.6);
+    }
+
+    nav {
+      background: white;
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      padding: 15px 0;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #333;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    nav a:hover {
+      color: #6a4ae3;
+    }
+
+    .section {
+      max-width: 1000px;
+      margin: 50px auto;
+      padding: 20px;
+    }
+
+    .dog-gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+
+    .dog-card {
+      background: white;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      text-align: center;
+      padding-bottom: 10px;
+    }
+
+    .dog-card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+
+    .dog-card h3 {
+      margin: 10px 0 5px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: #eee;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Bienvenue dans le Monde des Chiens</h1>
+    <p>Découvrez les races, apprenez à les connaître et explorez notre section interactive !</p>
+  </header>
+
+  <nav>
+    <a href="index.html">Accueil</a>
+    <a href="races.html">Races de chiens</a>
+    <a href="chasse.html">Chiens de chasse</a>
+    <a href="interactif.html">Chiens interactifs</a>
+  </nav>
+
+  <div class="section">
+    <h2>Quelques chiens adorables</h2>
+
+    <div class="dog-gallery">
+
+      <div class="dog-card">
+        <img src="https://images.unsplash.com/photo-1507149833265-60c372daea22" alt="Berger Allemand">
+        <h3>Berger Allemand</h3>
+      </div>
+
+      <div class="dog-card">
+        <img src="https://images.unsplash.com/photo-1507149833265-60c372daea22" alt="Labrador">
+        <h3>Labrador</h3>
+      </div>
+
+      <div class="dog-card">
+        <img src="https://images.unsplash.com/photo-1558788353-f76d92427f16" alt="Golden Retriever">
+        <h3>Golden Retriever</h3>
+      </div>
+
+    </div>
+  </div>
+
+  <footer>
+    © 2025 - Monde des Chiens | Site créé avec passion 🐶
+  </footer>
+
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Chiens de famille</title>
   <link rel="stylesheet" href="style.css">
 </head>
