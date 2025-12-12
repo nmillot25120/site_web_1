@@ -102,5 +102,53 @@ h2 {
 .dog-card-interactive:hover .dog-animated {
   transform: scale(1.15);
 }
+.interactive-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
+  margin-top: 40px;
+}
+
+.dog-card-interactive {
+  width: 260px;
+  background: #fff;
+  padding: 15px;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  text-align: center;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.dog-card-interactive:hover {
+  transform: scale(1.08);
+}
+
+.dog-card-interactive:active {
+  transform: scale(0.95);
+}
+
+.dog-animated {
+  width: 100%;
+  border-radius: 12px;
+  transition: transform 0.4s ease;
+  animation: wiggle 2.2s infinite ease-in-out;
+}
+
+/* Animation de mouvement */
+@keyframes wiggle {
+  0%   { transform: translateY(0) scale(1); }
+  25%  { transform: translateY(-5px) scale(1.03); }
+  50%  { transform: translateY(0) scale(1); }
+  75%  { transform: translateY(5px) scale(0.98); }
+  100% { transform: translateY(0) scale(1); }
+}
+
+/* Zoom au survol */
+.dog-card-interactive:hover .dog-animated {
+  transform: scale(1.15);
+}
+
 
 
